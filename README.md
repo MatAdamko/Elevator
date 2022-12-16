@@ -25,5 +25,4 @@ Elevator takes a Call Order to a Floor, which is random. After reaching any Call
 The Elevator Application is compiled and run in IDE.
 Follow the instructions in the console application when you run it.
 Just to be safe, enter only integers into the application initialization phase (number of Cabins and number of Floors).
-You can enter any number, limit being Int variable size and the computers memory, but be careful. I'm working on putting a limit on this number.
 
