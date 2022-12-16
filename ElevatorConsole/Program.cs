@@ -13,17 +13,31 @@ namespace ElevatorConsole
             Console.Write(
                 "Welcome to the Elevator Simulation Application!\n" +
                 "Enter the number of Cabins you would like to see running up and down.\n" +
-                "There is no limit in this version, so be careful! (works best with 1 anyway, for now)\n" +
+                "Please, select between 1 and 4 (works best with 1 anyway, for now)\n" +
                 "-> ");
+
             cabins = Int32.Parse(Console.ReadLine());
+            while (cabins < 1 || cabins > 4)
+            {
+                Console.Write("\r");
+                Console.Write("-> ");
+                cabins = Int32.Parse(Console.ReadLine());
+            }
 
             //Take number of Floors
             Console.Write(
                 "And now enter the number of floors that these cabins will have to deal with.\n" +
                 "There is no limit in this version, so be careful!\n" +
+                "Please, select between 4 and 20\n" +
                 "-> ");
 
             floors = Int32.Parse(Console.ReadLine());
+            while (floors < 4 || floors > 20)
+            {
+                Console.Write("\r");
+                Console.Write("-> ");
+                floors = Int32.Parse(Console.ReadLine());
+            }
 
             Group group1 = new Group(floors, cabins);
 
