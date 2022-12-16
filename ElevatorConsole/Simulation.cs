@@ -64,8 +64,12 @@ namespace ElevatorConsole
                 }
 
                 //Buff Floor Button
-                if (group.Floors[i].Button == true) floor += "*     " + i.ToString();
-                else floor += "      " + i.ToString();
+                floor += i.ToString();
+                if (group.Floors[i].Button == true) floor += " *";
+                for (int j = 0; j < group.Cabins.Count; j++)
+                {
+                    if (group.Cabins[j].CabinOrders.Contains(i)) floor += " o";
+                }
 
                 //Draw the Floor
                 Console.WriteLine(floor);
@@ -89,6 +93,12 @@ namespace ElevatorConsole
                 //Draw the division
                 Console.WriteLine(floor);
             }
+            Console.WriteLine(
+                " * = Call of the Cabin to the Floor\n" +
+                " o = Order from a Passenger inside the Cabin\n\n" +
+                " Chance of calling an elevator is set to 20% per Tick.\n" +
+                " It might seem that there is a problem with the application (and there is, but not in this),\n" +
+                " but please press Enter a few more times before considering restarting the application.");
             Console.WriteLine("\nInsert \"q\" to quit, or press Enter to continue.");
         }
     }

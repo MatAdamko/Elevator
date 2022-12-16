@@ -68,9 +68,14 @@
         //Change heading to the farthest Cabin Order in that heading
         //If Cabin is heading Up, change Heading to the Highest Cabin Order
         //If Cabin heading Down, change Heading to the Lowest Cabin Order
+        //Prioritazes CabinOrders before FloorOrders
         {
             //Heading Up
-            if (Heading > Position && CabinOrders.Count > 0) Heading = CabinOrders.Max();
+            if (CabinOrders.Count > 0)
+            {
+                Heading = CabinOrders[0];
+            }
+            else if (Heading > Position && CabinOrders.Count > 0) Heading = CabinOrders.Max();
             //Heading Down
             else if (Heading < Position && CabinOrders.Count > 0) Heading = CabinOrders.Min();
         }
