@@ -22,5 +22,8 @@ Elevator should prioritise Orders from inside the Cabin instead of the Calls fro
 Elevator takes a Call Order to a Floor, which is random. After reaching any Called Floor the Cabin gets a random Order to move to a Floor to simulate a passenger wanting to get to his floor. I've NOT implemented a method to display an Order from a passenger, so the Elevator Cabins may seem to take random turns.
 
 # Steps for Compilation and Debugging
-The Elevator Application is compiled without debugging so far.
+The Elevator Application is compiled and run in IDE.
+Follow the instructions in the console application when you run it.
+Just to be safe, enter only integers into the application initialization phase (number of Cabins and number of Floors).
+You can enter any number, limit being Int variable size and the computers memory, but be careful. I'm working on putting a limit on this number.
 
