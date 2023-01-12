@@ -80,12 +80,12 @@ namespace ElevatorConsole
         {
             for (int i = 0; i < Cabins.Count; i++)
             {
-                if (Cabins[i].Heading > Cabins[i].Position && Cabins[i].Heading > floor && Cabins[i].Position < floor)
+                if (Cabins[i].Heading > Cabins[i].Position && Cabins[i].Heading >= floor && Cabins[i].Position < floor)
                 {
                     return true;
                 }
 
-                if (Cabins[i].Heading < Cabins[i].Position && Cabins[i].Heading < floor && Cabins[i].Position > floor)
+                if (Cabins[i].Heading < Cabins[i].Position && Cabins[i].Heading <= floor && Cabins[i].Position > floor)
                 {
                     return true;
                 }

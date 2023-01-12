@@ -97,7 +97,7 @@ namespace ElevatorConsole
                 " * = Call of the Cabin to the Floor\n" +
                 " o = Order from a Passenger inside the Cabin\n\n" +
                 " Chance of calling an elevator is set to 20% per Tick.\n" +
-                " It might seem that there is a problem with the application (and there is, but not in this),\n" +
+                " It might seem that there is a problem with the application,\n" +
                 " but please press Enter a few more times before considering restarting the application.");
             Console.WriteLine("\nInsert \"q\" to quit, or press Enter to continue.");
         }
